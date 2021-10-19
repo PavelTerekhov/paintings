@@ -33,14 +33,14 @@ const sliders = (slides, dir, prev, next) => {
 
         prevBtn.addEventListener('click', () => {
             plusSlides(-1);
-            items[slideIndex - 1].classList.remove('backOutLeft');
-            items[slideIndex - 1].classList.add('backOutRight');
+            items[slideIndex - 1].classList.remove('slideInLeft');
+            items[slideIndex - 1].classList.add('slideInRight');
         });
 
         nextBtn.addEventListener('click', () => {
             plusSlides(1);
-            items[slideIndex - 1].classList.remove('backOutRight');
-            items[slideIndex - 1].classList.add('backOutLeft');
+            items[slideIndex - 1].classList.remove('slideInRight');
+            items[slideIndex - 1].classList.add('slideInLeft');
         });
     } catch(e){}
 
@@ -48,13 +48,13 @@ const sliders = (slides, dir, prev, next) => {
         if (dir === 'vertical') {
             paused = setInterval(function() {
                 plusSlides(1);
-                items[slideIndex - 1].classList.add('backOutDown');
+                items[slideIndex - 1].classList.add('slideInDown');
             }, 3000);
         } else {
             paused = setInterval(function() {
                 plusSlides(1);
-                items[slideIndex - 1].classList.remove('backOutRight');
-                items[slideIndex - 1].classList.add('backOutLeft');
+                items[slideIndex - 1].classList.remove('slideInRight');
+                items[slideIndex - 1].classList.add('slideInLeft');
             }, 3000);
         }
     }
