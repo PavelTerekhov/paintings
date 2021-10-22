@@ -1221,6 +1221,9 @@ h4 {
   color: inherit;
   resize: none;
 }
+.status {
+  text-align: center;
+}
 .popup-design .form input::placeholder,
 .popup-design .form textarea::placeholder {
   color: black;
